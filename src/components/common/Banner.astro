@@ -1,0 +1,50 @@
+---
+
+
+export interface Props {
+  title?: string;
+  imagen ?:string;
+  crumbs ?:string;
+  crumbs2 ?:string;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  imagen = await Astro.slots.render('imagen'),
+  crumbs = await Astro.slots.render('crumbs'),
+  crumbs2 = await Astro.slots.render('crumbs'),
+} = Astro.props;
+---
+<div class=`relative w-full bg-[url(${imagen})] bg-repeat-round `>
+
+  
+ <div class=" isolate overflow-hidden  bg-gradient-to-r from-cyan-500 to-blue-500 opacity-70 py-24 sm:py-32 ">
+
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 flex  flex-col justify-items-center  items-center content-center    justify-center">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{title}</h2>
+      
+    </div>
+    <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+        <a href="#">{crumbs }<span aria-hidden="true"> /</span> {crumbs2 }</a>
+  
+      </div>
+    
+    </div>
+
+    
+  </div>
+ 
+ </div>
+ <div class="absolute  isolate w-screen  bg-gradient-to-r from-cyan-500 to-blue-500 opacity-70 py-24 sm:py-3" >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+<path class="elementor-shape-fill" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+</svg>		</div>
+</div>
+
+
+
+

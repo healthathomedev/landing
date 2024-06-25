@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getAsset, getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -45,7 +45,7 @@ export const headerData = {
         {
           text: 'Radiografías (RX) y Ecografías a Domicilio',
           href: getPermalink('/landing/product'),
-        }
+        },
       ],
     },
     {
@@ -62,7 +62,7 @@ export const headerData = {
     },
     {
       text: 'Empresas',
-      href: '#',
+      href: '/company',
     },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
